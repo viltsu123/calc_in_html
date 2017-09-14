@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <script 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    </head> 
+    <body> 
+        <div id="ekaSivu" data-role="page">
+         <div data-role="header">
+         <h1>Laskin(Calculator)</h1>
+         </div> <!-- /header -->
+
+         <div role="main" class="ui-content ui-body-a">
+             
+             <p id="summa"></p>
+            <p>Eka Numero:</p>
+             <input data-clear-btn="false" name="number-1" id="number-1" value="" type="number">
+             <br>
+             <p>Toka numero:</p>
+             <input data-clear-btn="false" name="number-2" id="number-2" value="" type="number">
+             <button onclick="plus()">+</button>
+             <br>
+             <button onclick="miinus()">-</button>
+             <script>
+                
+                 function plus(){
+                     var eka = parseInt(document.getElementById("number-1").value);
+                var toka = parseInt(document.getElementById("number-2").value);
+                     var tulos = eka + toka;
+                     document.getElementById("summa").innerHTML="tulos on: " + tulos;
+                 }
+                 function miinus(){
+                     var eka = parseInt(document.getElementById("number-1").value);
+                var toka = parseInt(document.getElementById("number-2").value);
+                     var tulos = eka - toka;
+                     document.getElementById("summa").innerHTML="tulos on: " + tulos;
+                 }
+             </script>
+             
+         </div> <!-- /content -->
+         <div data-role="footer">
+         <h4>Mobilecodeing...</h4>
+     </div> <!-- /footer -->
+    </div> 
+    </body> 
+</html> 
